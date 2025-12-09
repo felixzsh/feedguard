@@ -1,0 +1,14 @@
+outputFile: daily_digest.md
+
+sources:
+  - platform: facebook
+    handle: CNN
+    limit: 10
+    filters:
+      blacklist: ["politics", "celebrity", "trump", "biden"]
+
+  - platform: facebook
+    handle: NASA
+    limit: 5
+    filters:
+      blacklist: ["job opening", "career", "hiring"]
