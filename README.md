@@ -21,7 +21,6 @@ FeedGuard is a simple CLI tool built with Bun and Playwright that achieves read-
 - `feedguard auth` - Authenticate with social platforms
 - `feedguard run` - Generate a new digest
 - `feedguard view` - View previously generated digests
-- Config file support - Define sources, filters, and output settings
 
 ## Getting Started
 
@@ -110,8 +109,10 @@ Add `feedguard run` to your system startup. This way:
 
 ### MVP (Current)
 
-- [ ] Session persistence
-- [ ] Basic CLI with auth/run commands
+- [x] basic auth CLI command
+- [x] Session persistence (only wit chrome channel)
+- [ ] standardize auth validation
+- [ ] Basic CLI run command
 - [ ] Facebook platform support
 - [ ] Keyword-based filtering (blacklists)
 - [ ] Markdown output generation
