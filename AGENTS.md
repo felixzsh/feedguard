@@ -3,10 +3,6 @@
 ## Project Context
 Read-only social media scraper. Session-based auth, no interactions during scraping.
 
-## Decision Authority
-**Agent:** implementation, names, test structure  
-**Human:** architecture, dependencies, git, scope
-
 ## Stack
 
 * **Runtime:** Bun 1.x
@@ -46,22 +42,3 @@ src/
 ├── utils/                    # logger, retry, sanitize, date
 └── types/                    # Shared TypeScript types
 ```
-
-## Code Style
-
-* Functional programming preferred
-* Composition over inheritance
-* Self-explanatory code - no comments unless WHY
-* Named exports preferred over default exports
-* Async/await over callbacks or raw promises
-* Early returns to reduce nesting
-
-## Never Do
-* interact with git/github
-* remove files without explicit request
-* use emojis
-* log sensitive data (cookies, tokens, passwords)
-* modify package.json without discussion
-* use default exports
-* use classes when functions work
-* add dependencies without alternatives discussion
