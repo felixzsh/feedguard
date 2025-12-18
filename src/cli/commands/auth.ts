@@ -7,7 +7,7 @@ export async function authCommand(platformName: string) {
   try {
 
     // lazy load platform
-    await import(`../../platforms/${platformName}-platform.js`);
+    await import(`../../platforms/${platformName}.js`);
 
     const platform = platformRegistry.getPlatform(platformName.toLowerCase());
     if (!platform) {
