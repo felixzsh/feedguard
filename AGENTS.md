@@ -31,8 +31,7 @@ src/
 │   └── ui/                   # notifications, prompts
 ├── platforms/
 │   ├── base/                 # Platform interface & shared types
-│   ├── facebook/             # Facebook scraper + auth
-│   ├── twitter/              # Future platforms...
+│   ├── <platform.ts>         # specific platform implementation
 │   └── registry.ts           # Platform factory
 ├── core/
 │   ├── browser/              # Playwright + session management
