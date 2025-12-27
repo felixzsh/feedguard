@@ -2,6 +2,7 @@
 
 import { Command } from 'commander';
 import { authCommand } from './commands/auth.js';
+import { runCommand } from './commands/run.js';
 
 const program = new Command();
 
@@ -15,5 +16,10 @@ program
   .description('Authenticate with a social media platform')
   .argument('<platform>', 'Social media platform to login to')
   .action(authCommand);
+
+program
+  .command('run')
+  .description('Run the feed scraper')
+  .action(runCommand);
 
 program.parse();
