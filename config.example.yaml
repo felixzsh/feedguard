@@ -1,9 +1,7 @@
-outputFile: daily_digest.md
-
 sources:
   - platform: facebook
     handle: CNN
-    limit: 10
+    limit: 5
     filters:
       blacklist: ["politics", "celebrity", "trump", "biden"]
 
