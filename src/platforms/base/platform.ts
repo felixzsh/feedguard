@@ -1,16 +1,12 @@
 // Base platform interface
 // This file defines the IPlatform interface that all platforms must implement
-// For now, it's kept minimal - will be expanded as needed
+import type { Post } from './types.js';
+import type { PlatformSelectors } from './types.js';
 
 export interface IPlatform {
-  getConfig(): {
-    name: string;
-    loginUrl: string;
-    selectors: {
-      version: string;
-      loggedInIndicators: string[];
-    };
-  };
-  
+  readonly name: string;
+  readonly baseUrl: string;
+  readonly selectors: PlatformSelectors;
   validateLogin(page: any): Promise<boolean>;
+  scrapePosts(page: any, handle: string, limit: number): Promise<Post[]>;
 }

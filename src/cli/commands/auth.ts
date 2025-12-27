@@ -16,29 +16,27 @@ export async function authCommand(platformName: string) {
       process.exit(1);
     }
 
-    const config = platform.getConfig();
-
     const existingSession = await loadSession();
     console.log(existingSession ? 'Loaded existing session' : 'No existing session found');
 
-    console.log(`Opening browser to ${config.loginUrl}...`);
+    console.log(`Opening browser to ${platform.baseUrl}...`);
     const { browser, page } = await launchBrowser(existingSession);
 
     try {
-      await navigateTo(page, config.loginUrl);
+      await navigateTo(page, platform.baseUrl);
 
       console.log(`
-=======================================================================
-Please log in to ${config.name} manually in the browser window.
-Complete any 2FA, captchas, or security checks.
-When you reach the ${config.name} homepage, return to this terminal.
-=======================================================================
-`);
+ =======================================================================
+ Please log in to ${platform.name} manually in the browser window.
+ Complete any 2FA, captchas, or security checks.
+ When you reach to ${platform.name} homepage, return to this terminal.
+ =======================================================================
+ `);
 
       await waitForUserConfirmation('Press any key to continue after successful login...');
 
       const pageContent = await getPageContent(page);
-      await savePageContent(config.name, pageContent);
+      await savePageContent(platform.name, pageContent);
       // TODO: implement validation per platform
       console.log('Login assumed successful');
 

@@ -48,7 +48,7 @@ All platforms normalize to:
 interface Post {
   id: string;
   platform: string;
-  author: { handle, name? }
+  author: string;
   content: { text, images?, links? }
   metadata?: { timestamp, url }
 }

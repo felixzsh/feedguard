@@ -1,4 +1,6 @@
-import type { Platform, PlatformConfig } from './base/types.js';
+import type { Platform } from './base/types.js';
+import type { Page } from 'playwright';
+import type { Post } from './base/types.js';
 import { platformRegistry } from './registry.js';
 
 export const TWITTER_SELECTORS = {
@@ -9,22 +11,21 @@ export const TWITTER_SELECTORS = {
 };
 
 // Placeholder for future authentication logic
-export async function validateTwitterLogin(page: any): Promise<boolean> {
-  // For now, always return true - validation will be implemented later
+export async function validateTwitterLogin(page: Page): Promise<boolean> {
   return true;
 }
 
 export class TwitterPlatform implements Platform {
-  getConfig(): PlatformConfig {
-    return {
-      name: 'twitter',
-      loginUrl: 'https://twitter.com',
-      selectors: TWITTER_SELECTORS
-    };
+  readonly name = 'twitter';
+  readonly baseUrl = 'https://twitter.com';
+  readonly selectors = TWITTER_SELECTORS;
+
+  async validateLogin(page: Page): Promise<boolean> {
+    return validateTwitterLogin(page);
   }
 
-  async validateLogin(page: any): Promise<boolean> {
-    return validateTwitterLogin(page);
+  async scrapePosts(page: Page, handle: string, limit: number): Promise<Post[]> {
+    return [];
   }
 }
 
