@@ -1,0 +1,7 @@
+sources:
+  - platform: facebook
+    handle: CNN
+    limit: 5
+    filters:
+      blacklist: ["politics", "celebrity"]
+    extraField: should be ignored

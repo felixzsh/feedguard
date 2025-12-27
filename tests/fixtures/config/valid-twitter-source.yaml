@@ -1,0 +1,6 @@
+sources:
+  - platform: twitter
+    handle: elonmusk
+    limit: 20
+    filters:
+      blacklist: ["spam", "crypto"]

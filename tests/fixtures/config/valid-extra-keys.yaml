@@ -1,0 +1,7 @@
+sources:
+  - platform: facebook
+    handle: CNN
+    limit: 5
+    filters:
+      blacklist: ["politics"]
+extraKey: invalid_for_zod

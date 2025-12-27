@@ -1,0 +1,3 @@
+sources:
+  - platform: facebook
+    limit: 5

@@ -1,0 +1,6 @@
+sources:
+  - platform: facebook
+    handle: CNN
+    limit: 5
+    filters:
+      blacklist: "unmatched quote

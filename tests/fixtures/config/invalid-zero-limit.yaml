@@ -1,0 +1,4 @@
+sources:
+  - platform: facebook
+    handle: CNN
+    limit: 0

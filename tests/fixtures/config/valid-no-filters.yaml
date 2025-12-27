@@ -1,0 +1,8 @@
+sources:
+  - platform: facebook
+    handle: CNN
+    limit: 10
+
+  - platform: twitter
+    handle: NASA
+    limit: 5

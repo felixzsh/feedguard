@@ -1,0 +1,16 @@
+sources:
+  - platform: facebook
+    handle: CNN
+    limit: 5
+    filters:
+      blacklist: ["politics"]
+
+  - platform: twitter
+    handle: NASA
+    limit: 3
+    filters:
+      blacklist: ["job opening"]
+
+  - platform: facebook
+    handle: Tesla
+    limit: 8

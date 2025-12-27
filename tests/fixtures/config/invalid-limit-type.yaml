@@ -1,0 +1,4 @@
+sources:
+  - platform: facebook
+    handle: testuser
+    limit: invalid_type
