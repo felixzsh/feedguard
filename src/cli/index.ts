@@ -1,8 +1,8 @@
 #!/usr/bin/env bun
-
 import { Command } from 'commander';
 import { authCommand } from './commands/auth.js';
 import { runCommand } from './commands/run.js';
+import { cleanerCommand } from './commands/cleaner.js';
 
 const program = new Command();
 
@@ -21,5 +21,11 @@ program
   .command('run')
   .description('Run the feed scraper')
   .action(runCommand);
+
+program
+  .command('cleaner')
+  .description('Clean massive HTML files for LLM context (reduces ~94%)')
+  .argument('<html-file>', 'Path to HTML file to clean')
+  .action(cleanerCommand);
 
 program.parse();

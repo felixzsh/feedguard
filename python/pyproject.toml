@@ -1,0 +1,21 @@
+[project]
+name = "html-cleaner"
+version = "0.1.0"
+description = "HTML cleaning utilities for web scrapping"
+authors = [
+    {name = "felixzsh",email = "felix.sanchez.dev@gmail.com"}
+]
+
+package-mode = false
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "htmlrag (>=0.1.1,<0.2.0)",
+    "beautifulsoup4 (>=4.14.3,<5.0.0)",
+    "lxml (>=6.0.2,<7.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
