@@ -8,5 +8,6 @@ config.yaml
 playwright/.cache
 playwright/test-results
 playwright/.auth
+*.pyc
 *.local
 .feedguard-data/

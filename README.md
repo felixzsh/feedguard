@@ -16,6 +16,11 @@ FeedGuard offers a different approach: **conscious consumption**. View posts fro
 
 FeedGuard is a simple CLI tool built with Bun and Playwright that achieves read-only social media scraping. By leveraging Playwright's browser automation capabilities, it can access social platforms in a logged-in state while maintaining a strict read-only policy—no interactions, no engagement metrics, just viewing.
 
+## IMPORTANT NOTE:
+
+The auth approach is actually a limitation, this project should not depend in any form of auth methods, since similar
+paid apis doesnt rely on that.
+
 **Core Commands:**
 
 - `feedguard auth` - Authenticate with social platforms
